@@ -79,12 +79,32 @@ class Cursor
 
     case get_input
 
-    when 
+    when :up
+      update_pos(MOVES(:up)) # => [-1, 0]
+      
+    when :down
+      update_pos(MOVES(:down))
+      
+    when :left
+      update_pos(MOVES(:left))
+      
+    when :right
+      update_pos(MOVES(:right))
+      
+    when :return||:space
+      return cursor_pos
 
-    when 
+    when :ctrl_c
+      system("exit")
+    end
 
   end
 
   def update_pos(diff)
+    d_row, d_col = diff
+    c_row, c_col = cursor_pos
+    row = c_row + d_row
+    col = c_col + d_col
+    @cursor_pos = [row, col]
   end
 end
