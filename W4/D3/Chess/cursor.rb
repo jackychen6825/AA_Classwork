@@ -77,25 +77,25 @@ class Cursor
 
   def handle_key(key)
 
-    case get_input
+    case key 
 
     when :up
-      update_pos(MOVES(:up)) # => [-1, 0]
+      update_pos(MOVES[:up]) # => [-1, 0]
       
     when :down
-      update_pos(MOVES(:down))
+      update_pos(MOVES[:down])
       
     when :left
-      update_pos(MOVES(:left))
+      update_pos(MOVES[:left])
       
     when :right
-      update_pos(MOVES(:right))
+      update_pos(MOVES[:right])
       
     when :return||:space
       return cursor_pos
 
     when :ctrl_c
-      system("exit")
+      system("\u0003")
     end
 
   end
