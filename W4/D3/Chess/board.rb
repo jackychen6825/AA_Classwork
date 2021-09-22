@@ -1,6 +1,7 @@
 require_relative "knight_king"
 require_relative "queen_rook_bishop"
 require_relative "null_piece"
+require_relative "pawn"
 
 
 class Board
@@ -25,7 +26,7 @@ class Board
 
   def pieces
   
-    [ 
+    pieces = [ 
       Queen.new(:B, self, [0,3]),
       Queen.new(:W, self, [7,3]),
       King.new(:B, self, [0,4]),
@@ -43,6 +44,14 @@ class Board
       Bishop.new(:W, self, [7,2]),
       Bishop.new(:W, self, [7,5]),
     ]
+    (0...8).each do |col|
+      pieces << Pawn.new(:B, self, [1, col])
+    end
+    (0...8).each do |col|
+      pieces << Pawn.new(:W, self, [6, col])
+    end
+
+    pieces
 
   end 
 
@@ -69,5 +78,6 @@ class Board
     self[end_pos] = piece
   end 
 
+  
 end
 

@@ -1,15 +1,18 @@
 require_relative "piece"
 
 class Pawn < Piece
-  attr_accessor :start_row
 
   def initialize(color, board, pos)
     super
     @symbol = :P  
-    @start_row = true 
   end
 
   def moves(pos, board)
+    if color == :B
+      mod = 1
+    else
+      mod = -1
+    end
     moves = [] 
     moves << [pos[0]+(1 * mod), pos[1]] 
     if at_start_row?
@@ -17,13 +20,17 @@ class Pawn < Piece
     end
 
     diagonal_1 = [pos[0]+(1 * mod), pos[1] + 1] 
-    
-
-    diagonal_2 = [pos[0]+(-1 * mod), pos[1] - 1] 
-
+    moves << diagonal_1 if !board[diagonal_1].nil? && !board[diagonal_1].empty?
+    diagonal_2 = [pos[0]+(1 * mod), pos[1] - 1] 
+    moves << diagonal_2 if !board[diagonal_2].nil? && !board[diagonal_2].empty?
+    moves
   end
   
   def at_start_row?
-    @start_row
+    if color == :B
+      pos.first == 1
+    else
+      pos.first == 6
+    end
   end 
 end
