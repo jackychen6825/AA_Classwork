@@ -1,11 +1,8 @@
-require "byebug"
-
 module Slideable
   
   def moves(pos, board)
 
     moves = []
-    debugger
     moves_dirs.each do |dir|
       moves.concat(grow_unblocked_moves(pos, dir, board))
     end 
@@ -14,12 +11,7 @@ module Slideable
   end
 
   
-  # def diagonal_dirs
-  #   [[1,1], [-1,1],[1,-1], [-1,-1]]
-  # end
-  
   def grow_unblocked_moves(pos, dir, board)
-    debugger
     unblocked = []
     move = pos.dup 
     8.times do 

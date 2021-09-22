@@ -1,5 +1,7 @@
-require_relative "piece"
+require_relative "knight_king"
+require_relative "queen_rook_bishop"
 require_relative "null_piece"
+
 
 class Board
 
@@ -18,7 +20,6 @@ class Board
     pieces.each do |piece|
       add_piece(piece, piece.pos)
     end  
-    @null_piece = nil 
   end
 
 
@@ -63,6 +64,7 @@ class Board
     raise "No peice at start pos" if self[start_pos].empty?
     piece = self[start_pos]
     raise "Invalid end position" unless piece.valid_moves.include?(end_pos)
+    debugger
     self[start_pos] = NullPiece.instance() 
     self[end_pos] = piece
   end 
