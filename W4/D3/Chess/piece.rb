@@ -1,5 +1,6 @@
 class Piece
-  attr_reader :color, :board, :pos, :symbol
+  attr_reader :color, :board, :symbol
+  attr_accessor :pos
   
   def initialize(color, board, pos)
     @color = color
@@ -30,6 +31,8 @@ class Piece
   def inspect 
     symbol
   end
+
+  
 
   private 
   def moves(pos, board)

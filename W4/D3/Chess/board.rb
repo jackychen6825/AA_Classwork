@@ -76,6 +76,7 @@ class Board
     # debugger
     self[start_pos] = NullPiece.instance() 
     self[end_pos] = piece
+    piece.pos = end_pos
   end 
 
   
