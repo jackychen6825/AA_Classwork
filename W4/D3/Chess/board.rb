@@ -27,28 +27,28 @@ class Board
   def pieces
   
     pieces = [ 
-      Queen.new(:B, self, [0,3]),
-      Queen.new(:W, self, [7,3]),
-      King.new(:B, self, [0,4]),
-      King.new(:W, self, [7,4]),
-      Rook.new(:B, self, [0,0]),
-      Rook.new(:B, self, [0,7]),
-      Rook.new(:W, self, [7,0]),
-      Rook.new(:W, self, [7,7]),
-      Knight.new(:B, self, [0,1]),
-      Knight.new(:B, self, [0,6]),
-      Knight.new(:W, self, [7,1]),
-      Knight.new(:W, self, [7,6]),
-      Bishop.new(:B, self, [0,2]),
-      Bishop.new(:B, self, [0,5]),
-      Bishop.new(:W, self, [7,2]),
-      Bishop.new(:W, self, [7,5]),
+      Queen.new(:blue, self, [0,3]),
+      Queen.new(:red, self, [7,3]),
+      King.new(:blue, self, [0,4]),
+      King.new(:red, self, [7,4]),
+      Rook.new(:blue, self, [0,0]),
+      Rook.new(:blue, self, [0,7]),
+      Rook.new(:red, self, [7,0]),
+      Rook.new(:red, self, [7,7]),
+      Knight.new(:blue, self, [0,1]),
+      Knight.new(:blue, self, [0,6]),
+      Knight.new(:red, self, [7,1]),
+      Knight.new(:red, self, [7,6]),
+      Bishop.new(:blue, self, [0,2]),
+      Bishop.new(:blue, self, [0,5]),
+      Bishop.new(:red, self, [7,2]),
+      Bishop.new(:red, self, [7,5]),
     ]
     (0...8).each do |col|
-      pieces << Pawn.new(:B, self, [1, col])
+      pieces << Pawn.new(:blue, self, [1, col])
     end
     (0...8).each do |col|
-      pieces << Pawn.new(:W, self, [6, col])
+      pieces << Pawn.new(:red, self, [6, col])
     end
 
     pieces

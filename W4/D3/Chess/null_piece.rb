@@ -4,7 +4,7 @@ class NullPiece < Piece
   include Singleton
 
   def initialize
-    @color = "clear"
+    @color = :white
     @symbol = :_
   end
 

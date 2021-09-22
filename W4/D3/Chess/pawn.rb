@@ -8,7 +8,7 @@ class Pawn < Piece
   end
 
   def moves(pos, board)
-    if color == :B  
+    if color == :blue
       mod = 1
     else
       mod = -1
@@ -33,7 +33,7 @@ class Pawn < Piece
   end
   
   def at_start_row?
-    if color == :B
+    if color == :blue
       pos.first == 1
     else
       pos.first == 6
