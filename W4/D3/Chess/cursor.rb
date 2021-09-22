@@ -80,7 +80,7 @@ class Cursor
     case key 
 
     when :up
-      update_pos(MOVES[:up]) # => [-1, 0]
+      update_pos(MOVES[:up])
       
     when :down
       update_pos(MOVES[:down])
@@ -97,7 +97,7 @@ class Cursor
     when :ctrl_c
       Process.exit(0)
     end
-
+    nil
   end
 
   def update_pos(diff)

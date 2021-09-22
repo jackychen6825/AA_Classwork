@@ -35,5 +35,8 @@ d = Display.new(b)
 while true
   d.render
   value = d.cursor.get_input
-  p value unless value.nil?
+  unless value.nil?
+    p value
+    sleep(1)
+  end
 end 
