@@ -19,7 +19,7 @@ class Piece
         end
       end
     end
-    v_moves
+    v_moves & moves(pos, board) 
   end
 
   def empty?
@@ -30,4 +30,8 @@ class Piece
     color
   end
 
+  private 
+  def moves(pos, board)
+    []
+  end 
 end

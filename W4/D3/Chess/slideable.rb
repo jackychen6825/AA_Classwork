@@ -25,12 +25,16 @@ module Slideable
   end
 
   def grow_unblocked_moves(pos, dir, board)
-    row, col = pos
 
+    unblocked = []
+    move = pos.dup 
     8.times do 
-      [move[0]+row, move[1]+col]
+      row = move[0] + dir[0] 
+      col = move[1] + dir[1]
+      move = [row, col]
+      unblocked.push(move)
+      break unless board[move].nil? 
     end 
-
 
   end
 
