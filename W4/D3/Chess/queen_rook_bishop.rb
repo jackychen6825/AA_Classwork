@@ -4,7 +4,6 @@ require_relative "piece"
 class Queen < Piece
   include Slideable
 
-  attr_reader :symbol
   def initialize(color, board, pos)
     super
     @symbol = :Q
@@ -14,15 +13,16 @@ class Queen < Piece
     [[0,1], [0,-1],[-1,0], [1,0],[1,1], [-1,1],[1,-1], [-1,-1]]
   end
 
+
+
 end
 
 class Rook < Piece
   include Slideable
 
-  attr_reader :symbol
   def initialize(color, board, pos)
     super
-    @symbol = :Q
+    @symbol = :R
   end
 
   def moves_dirs
@@ -34,10 +34,9 @@ end
 class Bishop < Piece
   include Slideable
 
-  attr_reader :symbol
   def initialize(color, board, pos)
     super
-    @symbol = :Q
+    @symbol = :B
   end
 
   def moves_dirs

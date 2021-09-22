@@ -4,7 +4,6 @@ require_relative "stepable"
 class Knight < Piece
   include Stepable
 
-  attr_reader :symbol
   def initialize(color, board, pos)
     super
     @symbol = :N
@@ -28,7 +27,6 @@ end
 class King < Piece
   include Stepable
 
-  attr_reader :symbol
   def initialize(color, board, pos)
     super
     @symbol = :K

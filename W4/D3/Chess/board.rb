@@ -1,4 +1,5 @@
 require_relative "piece"
+require_relative "null_piece"
 
 class Board
 
@@ -13,32 +14,35 @@ class Board
     #   Array.new(8) {Piece.new()}
     # end 
 
-    @rows = Array.new(8) {Array.new(8)} 
+    @rows = Array.new(8) {Array.new(8, NullPiece.instance)} 
     pieces.each do |piece|
       add_piece(piece, piece.pos)
-    end 
+    end  
     @null_piece = nil 
   end
 
 
   def pieces
-    pieces_arr = []
+  
+    [ 
+      Queen.new(:B, self, [0,3]),
+      Queen.new(:W, self, [7,3]),
+      King.new(:B, self, [0,4]),
+      King.new(:W, self, [7,4]),
+      Rook.new(:B, self, [0,0]),
+      Rook.new(:B, self, [0,7]),
+      Rook.new(:W, self, [7,0]),
+      Rook.new(:W, self, [7,7]),
+      Knight.new(:B, self, [0,1]),
+      Knight.new(:B, self, [0,6]),
+      Knight.new(:W, self, [7,1]),
+      Knight.new(:W, self, [7,6]),
+      Bishop.new(:B, self, [0,2]),
+      Bishop.new(:B, self, [0,5]),
+      Bishop.new(:W, self, [7,2]),
+      Bishop.new(:W, self, [7,5]),
+    ]
 
-    (0...2).each do |i|
-      (0...8).each do |j|
-        pos = [i, j]
-        pieces_arr << Piece.new(:W, self, pos)
-      end 
-    end 
-
-    (6...8).each do |i|
-      (0...8).each do |j|
-        pos = [i, j]
-        pieces_arr << Piece.new(:B, self, pos)
-      end 
-    end 
-
-    pieces_arr
   end 
 
   def add_piece(piece, pos)
@@ -56,10 +60,10 @@ class Board
   end
 
   def move_piece(color, start_pos, end_pos)
-    raise "No peice at start pos" if self[start_pos].nil?
+    raise "No peice at start pos" if self[start_pos].empty?
     piece = self[start_pos]
     raise "Invalid end position" unless piece.valid_moves.include?(end_pos)
-    self[start_pos] = nil 
+    self[start_pos] = NullPiece.instance() 
     self[end_pos] = piece
   end 
 

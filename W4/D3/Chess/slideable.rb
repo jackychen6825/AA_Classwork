@@ -27,7 +27,7 @@ module Slideable
       col = move[1] + dir[1]
       move = [row, col]
       unblocked.push(move)
-      break unless board[move].nil? 
+      break unless board[move].empty? 
     end 
     unblocked
   end

@@ -1,10 +1,11 @@
 class Piece
-  attr_reader :color, :board, :pos
+  attr_reader :color, :board, :pos, :symbol
   
   def initialize(color, board, pos)
     @color = color
     @board = board
     @pos = pos
+    @symbol = :G 
 
   end
 
@@ -14,7 +15,7 @@ class Piece
       (0...8).each do |col|
         pos = [row, col]
         # if board[pos].color != color || board[pos].empty?
-        if board[pos].nil? || board[pos].color != color
+        if board[pos].empty? || board[pos].color != color
           v_moves << pos
         end
       end
@@ -27,7 +28,7 @@ class Piece
   end
 
   def inspect 
-    color
+    symbol
   end
 
   private 
