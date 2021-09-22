@@ -1,6 +1,6 @@
 module Stepable
 
-  def moves(pos)
+  def moves(pos, board)
     row, col = pos
     moves_diff.map do |move|
       [move[0]+row, move[1]+col]

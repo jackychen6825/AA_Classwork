@@ -64,7 +64,7 @@ class Board
     raise "No peice at start pos" if self[start_pos].empty?
     piece = self[start_pos]
     raise "Invalid end position" unless piece.valid_moves.include?(end_pos)
-    debugger
+    # debugger
     self[start_pos] = NullPiece.instance() 
     self[end_pos] = piece
   end 
