@@ -33,7 +33,7 @@ b = Board.new
 d = Display.new(b)
 
 while true
-  sleep(1)
   d.render
-  p d.cursor.get_input
+  value = d.cursor.get_input
+  p value unless value.nil?
 end 

@@ -91,11 +91,11 @@ class Cursor
     when :right
       update_pos(MOVES[:right])
       
-    when :return||:space
+    when :return || :space
       return cursor_pos
 
     when :ctrl_c
-      system("\u0003")
+      Process.exit(0)
     end
 
   end
@@ -103,8 +103,8 @@ class Cursor
   def update_pos(diff)
     d_row, d_col = diff
     c_row, c_col = cursor_pos
-    row = c_row + d_row
-    col = c_col + d_col
+    row = (c_row + d_row) % 8
+    col = (c_col + d_col) % 8
     @cursor_pos = [row, col]
   end
 end
