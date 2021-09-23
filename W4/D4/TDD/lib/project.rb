@@ -62,7 +62,8 @@ class Array
     best_pairs
   end 
 
+  
 
 end
 
-p [1,5,3,6,8,1,9,1].stock_picker
+
