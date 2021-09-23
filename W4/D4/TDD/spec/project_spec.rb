@@ -34,5 +34,16 @@ describe '#my_transpose' do
     expect(rows.my_transpose).to eq(cols)
     expect(cols.my_transpose).to eq(rows)
   end
+end 
 
-end
+describe '#stock_picker' do 
+  let (:stocks) {[1,5,3,6,8,1,9,1]}
+  it 'returns the most profitable days after buying then selling' do 
+    expect(stocks.stock_picker).to eq([[0,6],[5,6]])
+  end 
+
+  it 'you cannot sell before you buy' do 
+    expect(stocks.stock_picker).to_not eq([[0,6],[5,6],[6,7]])
+  end 
+  
+end 

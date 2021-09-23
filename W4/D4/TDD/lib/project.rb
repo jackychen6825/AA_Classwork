@@ -34,4 +34,35 @@ class Array
     transposed
   end
 
+  def stock_picker
+    pairs = [] 
+    profits = []
+    self.each.with_index do |num1, i|
+      self.each.with_index do |num2, j|
+        if j > i #&& (num2 - num1) >= best_profit
+          profits << num2 - num1
+          pairs << [i, j] 
+        end 
+      end 
+    end
+    max_profit = profits.max 
+    best_idx = []
+
+    profits.each.with_index do |profit, i|
+      if profit == max_profit
+        best_idx << i 
+      end 
+    end 
+
+    best_pairs = []
+    best_idx.each do |i|
+      best_pairs << pairs[i]
+    end 
+
+    best_pairs
+  end 
+
+
 end
+
+p [1,5,3,6,8,1,9,1].stock_picker
