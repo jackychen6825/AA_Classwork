@@ -55,6 +55,41 @@ class Board
 
   end 
 
+
+  def kings_pos(color)
+
+    (0...8).each do |row|
+      (0...8).each do |col|
+        pos = [row, col]
+        return pos if self[pos].is_a?(King) && self[pos].color == color 
+      end 
+    end 
+
+  end 
+
+  def in_check?(color, k_pos=nil)
+    
+    k_pos ||= kings_pos(color)
+
+    (0...8).each do |row|
+      (0...8).each do |col|
+        pos = [row, col]
+        return true if self[pos].valid_moves.include?(k_pos) && self[pos].color != color
+      end 
+    end 
+    false 
+  end 
+
+  def check_mate?(color)
+    if in_check?(color)
+      board[kings_pos(color)].valid_moves.all? do |poss_pos|
+        in_check?(color, poss_pos)
+      end
+    else 
+      false  
+    end 
+  end 
+
   def add_piece(piece, pos)
     self[pos] = piece
   end

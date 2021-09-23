@@ -91,7 +91,10 @@ class Cursor
     when :right
       update_pos(MOVES[:right])
       
-    when :return || :space
+    when :return  
+      return cursor_pos
+
+    when :space
       return cursor_pos
 
     when :ctrl_c

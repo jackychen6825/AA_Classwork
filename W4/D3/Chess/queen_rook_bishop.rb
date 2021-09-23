@@ -12,9 +12,6 @@ class Queen < Piece
   def moves_dirs
     [[0,1], [0,-1], [-1,0], [1,0], [1,1], [-1,1], [1,-1], [-1,-1]]
   end
-
-
-
 end
 
 class Rook < Piece
