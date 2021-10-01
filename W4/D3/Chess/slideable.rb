@@ -1,7 +1,7 @@
 require "byebug"
 module Slideable
   
-  def moves(pos, board)
+  def moves(pos, board) #[0,0] 
 
     moves = []
     moves_dirs.each do |dir|
@@ -24,6 +24,7 @@ module Slideable
       break if board[move].nil? 
       break unless board[move].empty?   
     end 
+
     unblocked
   end
 
