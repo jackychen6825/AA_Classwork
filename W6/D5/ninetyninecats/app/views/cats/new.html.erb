@@ -1,6 +1,6 @@
 <h1>Add Cat!</h1>
 
-<form action="<%= cat_url %>" method="post"> 
+<form action="<%= cat_url(@cat) %>" method="post"> 
 
 <label for="name"> Cat Name </label>
 <input id='name' type='text' name='cat[name]'>
@@ -28,3 +28,5 @@
 
 <label for="description">Description</label>
 <textarea name="cat[description]" id="description" cols="30" rows="10"></textarea>
+
+</form>
