@@ -479,3 +479,96 @@ Processing by CatsController#new as */*
 Completed 200 OK in 490ms (Views: 454.6ms | ActiveRecord: 15.0ms)
 
 
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Started GET "/cats/new" for ::1 at 2021-10-08 16:07:39 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malachicoberley/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as */*
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 901ms (Views: 864.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2021-10-08 16:08:31 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-10-08 16:08:33 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"", "dob"=>"", "description"=>""}}
+Unpermitted parameter: :dob
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:14
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:14
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 39.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-10-08 16:08:56 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Leo", "sex"=>"M", "color"=>"black", "dob"=>"2021-10-19", "description"=>"Cool"}}
+Unpermitted parameter: :dob
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:14
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:14
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Started GET "/cats" for 127.0.0.1 at 2021-10-08 16:18:20 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malachicoberley/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:4
+Completed 200 OK in 18ms (Views: 4.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-10-08 16:18:29 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2021-10-08 16:18:42 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 513ms (Views: 493.1ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-10-08 16:18:58 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Leo", "sex"=>"M", "color"=>"black", "dob"=>"2021-02-11", "description"=>"Cool"}}
+Unpermitted parameter: :dob
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:18
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 45.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-10-08 16:20:16 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Leo", "sex"=>"M", "color"=>"black", "dob"=>"2021-10-19", "description"=>"cool"}}
+Unpermitted parameter: :dob
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:18
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 54.9ms | ActiveRecord: 0.6ms)
+
+

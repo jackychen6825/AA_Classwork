@@ -5,8 +5,12 @@ class CatsController < ApplicationController
   end
 
   def show
-    cat = Cat.find_by(id: params[:id])
-    render json: cat
+    @cat = Cat.find_by(id: params[:id])
+    if @cat
+      render :show
+    else
+      redirect_to cats_url
+    end
   end
 
   def create
