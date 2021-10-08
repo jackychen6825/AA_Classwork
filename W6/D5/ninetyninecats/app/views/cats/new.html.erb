@@ -1,8 +1,8 @@
 <h1>Add Cat!</h1>
 
-<form action="<%= cat_url(@cat) %>" method="post"> 
+<form action="<%= cats_url %>" method="post"> 
 
-<label for="name"> Cat Name </label>
+<label for="name"> Cat Name </label> 
 <input id='name' type='text' name='cat[name]'>
 <br>
 
@@ -10,7 +10,7 @@
 <input id='M' type='radio' value='M' name='cat[sex]'> 
 <br>
 
-<label for="F"> F </label>
+<label for="F"> F </label> 
 <input id='F' type='radio' value='F' name='cat[sex]'> 
 <br>
 
@@ -26,7 +26,13 @@
 <label for='dob'>Date of Birth</label>
 <input id='dob' type='date' name='cat[dob]'> 
 
+<br>
+
 <label for="description">Description</label>
 <textarea name="cat[description]" id="description" cols="30" rows="10"></textarea>
+
+<br>
+
+<input type="submit" value='Create Cat'> 
 
 </form>

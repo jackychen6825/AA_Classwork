@@ -380,3 +380,102 @@ ActionView::Template::Error (No route matches {:action=>"show", :controller=>"ca
   
 app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb___141942735390702802_47354736118060'
 app/controllers/cats_controller.rb:23:in `new'
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE DATABASE "ninetyninecats_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE DATABASE "ninetyninecats_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/cats/new" for ::1 at 2021-10-08 18:23:57 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jacky/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as */*
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (402.2ms)
+Completed 500 Internal Server Error in 542ms (ActiveRecord: 19.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cat' for #<#<Class:0x00007fc3a3dcf7f8>:0x00007fc3a434b740>
+Did you mean?  @cats):
+    1: <h1>Add Cat!</h1>
+    2: 
+    3: <form action="<%= cat_url(cat) %>" method="post"> 
+    4: 
+    5: <label for="name"> Cat Name </label>
+    6: <input id='name' type='text' name='cat[name]'>
+  
+app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb__3367880755176397108_70239125836060'
+app/controllers/cats_controller.rb:23:in `new'
+Started GET "/cats/new" for ::1 at 2021-10-08 18:26:14 -0400
+Processing by CatsController#new as */*
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (376.6ms)
+Completed 500 Internal Server Error in 711ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"cats", :id=>nil}, missing required keys: [:id]):
+    1: <h1>Add Cat!</h1>
+    2: 
+    3: <form action="<%= cat_url(@cat) %>" method="post"> 
+    4: 
+    5: <label for="name"> Cat Name </label> 
+    6: <input id='name' type='text' name='cat[name]'>
+  
+app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb__3367880755176397108_70239120892000'
+app/controllers/cats_controller.rb:23:in `new'
+Started GET "/cats/new" for ::1 at 2021-10-08 18:30:52 -0400
+  [1m[35m (25.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jacky/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as */*
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (161.7ms)
+Completed 500 Internal Server Error in 465ms (ActiveRecord: 70.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"cats", :id=>nil}, missing required keys: [:id]):
+    1: <h1>Add Cat!</h1>
+    2: 
+    3: <form action="<%= cat_url(@cat) %>" method="post"> 
+    4: 
+    5: <label for="name"> Cat Name </label> 
+    6: <input id='name' type='text' name='cat[name]'>
+  
+app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb___1130661552939240059_70129284509740'
+app/controllers/cats_controller.rb:23:in `new'
+Started GET "/cats/new" for ::1 at 2021-10-08 18:32:40 -0400
+Processing by CatsController#new as */*
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (168.9ms)
+Completed 500 Internal Server Error in 490ms (ActiveRecord: 59.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"cats", :id=>nil}, missing required keys: [:id]):
+    1: <h1>Add Cat!</h1>
+    2: 
+    3: <form action="<%= cat_url(@cat) %>" method="post"> 
+    4: 
+    5: <label for="name"> Cat Name </label> 
+    6: <input id='name' type='text' name='cat[name]'>
+  
+app/views/cats/new.html.erb:3:in `_app_views_cats_new_html_erb___1130661552939240059_70129263046060'
+app/controllers/cats_controller.rb:23:in `new'
+Started GET "/cats/new" for ::1 at 2021-10-08 18:35:43 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jacky/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as */*
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 1542ms (Views: 1428.0ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/cats/new" for ::1 at 2021-10-08 18:59:27 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jacky/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as */*
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 490ms (Views: 454.6ms | ActiveRecord: 15.0ms)
+
+

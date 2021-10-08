@@ -19,7 +19,7 @@ class CatsController < ApplicationController
   end
 
   def new
-    @cats = Cat.new
+    @cat = Cat.new #:id? 
     render :new
   end
 
