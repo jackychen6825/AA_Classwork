@@ -24,8 +24,25 @@ RSpec.describe User, type: :model do
   end 
   
   describe "User::find_by_credentials" do 
-    let!(:user) { create(:user) } #random hp char w pass of password 
-    
+    FactoryBot.create(:user, username: 'Hermione Granger')
+
+    user = User.find_by_credentials('Hermione Granger', 'password')
+    it "should find the right user" do
+      expect(User.last.id).to eq(user.id)
+    end
   end 
+
+  describe "password=" do
+    let!(:user) { create(:user) }
+
+    it "should set password to password argument" do
+      expect(user.password).to eq("password")
+    end
+
+    it "should make password_digest with BCrypt" do 
+      expect(BCrypt::Password).to receive(:create).with('password')
+    end
+
+  end
 
 end
