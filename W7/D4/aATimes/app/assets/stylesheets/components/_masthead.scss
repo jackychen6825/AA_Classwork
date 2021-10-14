@@ -27,6 +27,10 @@
 	ul {
 		display: flex;
 	}
+
+	li:first-of-type {
+		font-weight: bold;
+	}
 }
 
 .logo {
@@ -40,6 +44,12 @@
 	font-size: 11px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	// position: absolute;
+
+
+	ul {
+		display: flex;
+	}
 
 	li {
 		margin-left: 10px;
