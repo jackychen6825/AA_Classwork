@@ -1,0 +1,26 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  position: relative;
+}
+
+.section-nav {
+  position: absolute;
+  top: 10px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin: 5px;
+}
+
+a:hover {
+  background-color: $light-gray;
+  text-decoration: underline;
+}
+
