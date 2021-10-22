@@ -25,10 +25,22 @@ Function.prototype.myBind = function (ctx) {
     return function () {
         let callArgs = Array.from(arguments); 
         let allArgs = bindArgs.concat(callArgs); 
-        console.log(allArgs);
         return func.apply(ctx, allArgs); 
     }
 }
+
+Function.prototype.myBind = function (ctx, ...args) {
+    let func = this;
+    let bindArgs = args;
+
+    return function (...args) {
+        let callArgs = args; 
+        let allArgs = bindArgs.concat(callArgs); 
+        return func.apply(ctx, allArgs); 
+    }
+}
+
+
 
 class Cat {
   constructor(name) {
@@ -74,3 +86,29 @@ const notMarkovSays = markov.says.myBind(pavlov);
 notMarkovSays("meow", "me");
 // Pavlov says meow to me!
 // true
+
+function curriedSum(args) {
+    const numbers = []; 
+
+    return function _curriedSum(number) {
+        numbers.push(number); 
+        if (numbers.length === args) {
+            let sum = 0;
+            for (let integer of numbers) {
+                sum = sum + integer; 
+            }
+            return sum 
+        } else {
+            return _curriedSum 
+        }
+    }
+
+    // return _curriedSum : also works 
+} 
+
+const testing = curriedSum(4);
+console.log(testing(5)(30)(20)(1)) 
+
+Function.prototype.curry = function () {
+    
+}
