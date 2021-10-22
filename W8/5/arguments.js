@@ -106,9 +106,19 @@ function curriedSum(args) {
     // return _curriedSum : also works 
 } 
 
-const testing = curriedSum(4);
-console.log(testing(5)(30)(20)(1)) 
+// const testing = curriedSum(4);
+// console.log(testing(5)(30)(20)(1)) 
 
-Function.prototype.curry = function () {
-    
+Function.prototype.curry = function (numArgs) {
+    let allArgs = [];
+    let func = this;
+    if (allArgs.length < numArgs) {
+        return function () {
+            func 
+        }
+    } else {
+        func.apply(, allArgs)
+    }
 }
+
+// ctx.method.curry?
