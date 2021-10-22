@@ -20,8 +20,13 @@ class ControllerBase
 
   # Set the response status code and header
   def redirect_to(url)
-    res.header['location'] = url 
-    res.status = 302
+    if already_built_response?
+      raise 'Something went wrong'
+    else
+      res.header['location'] = url 
+      res.status = 302
+      @already_built_response = true
+    end
   end
 
   # Populate the response with content.
