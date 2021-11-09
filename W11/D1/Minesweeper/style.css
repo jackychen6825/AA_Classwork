@@ -1,0 +1,25 @@
+.board {
+    display: flex;
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+
+.tile {
+    border: 1px solid black;
+    border-style: inset; 
+    height: 40px;
+    width: 67px;
+}
+
+.explored {
+    background-color: white;
+}
+
+.unexplored {
+    background-color: grey;
+}
+
+.flagged {
+    background-color: red;
+}
