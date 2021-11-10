@@ -22,19 +22,18 @@ class User < ApplicationRecord
     class_name: :Cat
   
   def reset_session_token!
-    self.session_token = SecureRandom.base64(16) 
-    self.save! # 
-    self.session_token 
+    self.session_token = SecureRandom.urlsafe_base64(16) 
+    self.save!
+    self.session_token
   end
 
   def password=(password)
-    @password = password
-    self.password_digest = BCrypt::Password.create(password)
+    self.password_digest = BCrypt::Password.create(password) #set password digest to a hashed password through BCrypt 
   end
 
-  def is_valid_password?(password) 
-    password_hash = BCrypt::Password.new(self.password_digest)
-    password_hash.is_password?(password)  
+  def is_password?(password)
+    password_object = BCrypt::Password.new(self.password_digest) #turn our password digest into a bcrypt object -> compare w the hashed argument 
+    password_object.is_password?(password)
   end 
 
   def self.find_by_credentials(username, password)

@@ -1,0 +1,11 @@
+<h1>Sign Up</h1>
+
+<form action="<%= users_url %>" method="POST">
+  <label>Username
+    <input name="user[username]" value="<%= @user.username %>">
+  </label>
+  <label>Password
+    <input name="user[password]" type="password">
+  </label>
+  <input type="submit" value="Sign Up">
+</form>

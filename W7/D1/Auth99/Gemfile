@@ -37,6 +37,13 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails' #diff version of rspec for rails 
+  
+  gem 'factory_bot_rails' #lets us create instances of objects automatically? 
+  #might need to create new user to do test on users controller -> call method thru factory bot rails to automatically create new instance of user 
+
+  gem 'rails-controller-testing'#helper methods for testing controllers? quite useful ...
+
 end
 
 group :development do
@@ -51,6 +58,16 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate'
 end
+
+group :test do 
+
+    gem 'faker'
+    
+    gem 'guard-rspec' #ensure we are testing updated code 
+    gem 'launchy' #can open up browser that shows current state of application in the middle of testing
+    gem 'shoulda-matchers' #allows u to write one liner tests
+
+end 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

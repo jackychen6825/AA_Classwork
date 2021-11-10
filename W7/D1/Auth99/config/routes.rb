@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create] #creating the appropriate routes for user new and create -> new directs one to the form pg. create saves to db
   resource :session, only: [:new, :create, :destroy] 
   
   root to: redirect('/cats')

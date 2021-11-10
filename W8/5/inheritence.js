@@ -7,10 +7,6 @@ Function.prototype.inherits = function (parent) {
   this.prototype.constructor = this;
 }
 
-
-
-
-
 function MovingObject () {}
 
 MovingObject.prototype.move = function () {
@@ -27,8 +23,15 @@ Ship.prototype.sail = function () {
 function Asteroid () {}
 Asteroid.inherits(MovingObject);
 
+Asteroid.prototype.hit = function () {
+  console.log('asteroid is hit')
+}
+
 const s = new Ship();
 const a = new Asteroid();
 
 s.move();
 a.move();
+
+
+
