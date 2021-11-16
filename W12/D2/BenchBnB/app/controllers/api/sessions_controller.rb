@@ -15,7 +15,12 @@ class Api::SessionsController < ApplicationController
     end 
 
     def destroy
-        logout!
-        redirect_to new_session_url
+        if current_user
+            logout!
+            render :new
+        else
+            flash.now[:errors] = ["No current user to sign out!"]
+            render status: 404
+        end
     end 
 end
