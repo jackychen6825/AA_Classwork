@@ -19,8 +19,8 @@ class Api::SessionsController < ApplicationController
             logout!
             render :new
         else
-            flash.now[:errors] = ["No current user to sign out!"]
-            render status: 404
+            flash.now[:errors] = ["No current user to sign out!"], status: 404
+            render :new     
         end
     end 
 end
