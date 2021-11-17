@@ -381,3 +381,320 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/session" for ::1 at 2021-11-16 19:27:03 -0500
+  
+ActionController::RoutingError (uninitialized constant Api::SessionController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/api/session/1" for ::1 at 2021-11-16 19:28:11 -0500
+  
+SyntaxError (/Users/jacky/Desktop/App Academy/AA_Classwork/W12/D2/BenchBnB/app/controllers/api/session_controller.rb:22: syntax error, unexpected tLABEL
+...nt user to sign out!"], status: 404
+...                        ^~~~~~~):
+  
+app/controllers/api/session_controller.rb:22: syntax error, unexpected tLABEL
+Started DELETE "/api/session/1" for ::1 at 2021-11-16 19:31:44 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/session/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/api/session" for ::1 at 2021-11-16 19:32:03 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_eOllZzzSgwBjMF1MwdgLQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Jacky2"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (3.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Y1ZK2XBvTVeW7g_lzWIRvQ"], ["updated_at", "2021-11-17 00:32:03.390617"], ["id", 1]]
+  ↳ app/models/user.rb:38
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+Completed 500 Internal Server Error in 520ms (ActiveRecord: 129.2ms)
+
+
+  
+NameError (undefined local variable or method `new_session_url' for #<Api::SessionsController:0x00007fd1d72f0e58>
+Did you mean?  api_session_url):
+  
+app/controllers/api/sessions_controller.rb:28:in `destroy'
+Started DELETE "/api/session/1" for ::1 at 2021-11-16 19:32:15 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/session/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/api/session" for ::1 at 2021-11-16 19:32:32 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_eOllZzzSgwBjMF1MwdgLQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `reset_session_token!' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `logout!'
+app/controllers/api/sessions_controller.rb:27:in `destroy'
+Started POST "/api/users" for ::1 at 2021-11-16 19:33:37 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jacky3", "password"=>"[FILTERED]"}}
+  [1m[35m (17.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:8
+  [1m[36mUser Exists (11.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jacky3"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:8
+  [1m[36mUser Create (42.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Jacky3"], ["session_token", "Xl4TP2uEkd3gKWry-ndIgg"], ["password_digest", "$2a$12$.GGJKK535hcdWjd9SfD1BeUrzAk3cj1PEFMKSKegqaAI5axrWAwoi"], ["created_at", "2021-11-17 00:33:38.092676"], ["updated_at", "2021-11-17 00:33:38.092676"]]
+  ↳ app/controllers/api/users_controller.rb:8
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:8
+No template found for Api::UsersController#create, rendering head :no_content
+Completed 204 No Content in 1529ms (ActiveRecord: 89.3ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-16 19:34:09 -0500
+Processing by Api::SessionsController#create as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/sessions_controller.rb:7:in `create'
+Started POST "/api/session" for ::1 at 2021-11-16 19:35:13 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jacky3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jacky3"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 500 Internal Server Error in 726ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Api::SessionsController:0x00007fd1d6c30988>):
+  
+app/controllers/api/sessions_controller.rb:13:in `create'
+Started POST "/api/session" for ::1 at 2021-11-16 19:36:06 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jacky3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jacky3"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Redirected to http://localhost:3000/api/users/2
+Completed 302 Found in 689ms (ActiveRecord: 20.5ms)
+
+
+Started GET "/api/users/2" for ::1 at 2021-11-16 19:36:07 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"2"}
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (15.9ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: json.extract! @user, :username, :id, :email
+  
+app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4192132108623613116_70269613022120'
+Started POST "/api/session" for ::1 at 2021-11-16 19:36:31 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jacky3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jacky3"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Redirected to http://localhost:3000/api/users/2
+Completed 302 Found in 884ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/api/users/2" for ::1 at 2021-11-16 19:36:32 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"2"}
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (18.3ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: json.extract! @user, :username, :id
+  
+app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4192132108623613116_70269614377240'
+Started POST "/api/session" for ::1 at 2021-11-16 19:37:51 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jacky3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jacky3"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Redirected to http://localhost:3000/api/users/2
+Completed 302 Found in 565ms (ActiveRecord: 22.5ms)
+
+
+Started GET "/api/users/2" for ::1 at 2021-11-16 19:37:52 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/users_controller.rb:7:in `show'
+Started POST "/api/session" for ::1 at 2021-11-16 19:38:27 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jacky3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jacky3"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Redirected to http://localhost:3000/api/users/2
+Completed 302 Found in 566ms (ActiveRecord: 43.8ms)
+
+
+Started GET "/api/users/2" for ::1 at 2021-11-16 19:38:28 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/users_controller.rb:7:in `show'
+Started POST "/api/session" for ::1 at 2021-11-16 19:39:02 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Jacky3", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jacky3"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Redirected to http://localhost:3000/api/users/2
+Completed 302 Found in 582ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/api/users/2" for ::1 at 2021-11-16 19:39:03 -0500
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/users_controller.rb:22:in `user_params'
+app/controllers/api/users_controller.rb:7:in `show'
+Started DELETE "/api/session" for ::1 at 2021-11-16 19:39:31 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Xl4TP2uEkd3gKWry-ndIgg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Exists (14.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Jacky3"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (11.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "XRdPzvfJyHdQWjpscqL0Tg"], ["updated_at", "2021-11-17 00:39:31.323057"], ["id", 2]]
+  ↳ app/models/user.rb:38
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 45.9ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/sessions/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jacky/Desktop/App Academy/AA_Classwork/W12/D2/BenchBnB/app/views"
+):
+  
+app/controllers/api/sessions_controller.rb:29:in `destroy'

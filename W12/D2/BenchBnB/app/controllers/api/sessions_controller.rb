@@ -1,6 +1,6 @@
-class Api::SessionController < ApplicationController
+class Api::SessionsController < ApplicationController
     def new
-        render :new 
+        @user = User.new
     end
 
     def create
@@ -10,17 +10,22 @@ class Api::SessionController < ApplicationController
             render :new 
         else
             login!(@user)
-            redirect_to user_url(@user) 
+            redirect_to  api_user_url(@user) 
         end 
     end 
 
+    # def destroy
+    #     if current_user
+    #         logout!
+    #         render :new
+    #     else
+    #         flash.now[:errors] = ["No current user to sign out!"], status: 404
+    #         render :new     
+    #     end
+    # end 
+
     def destroy
-        if current_user
-            logout!
-            render :new
-        else
-            flash.now[:errors] = ["No current user to sign out!"], status: 404
-            render :new     
-        end
-    end 
+        logout!
+        render :new
+    end
 end
