@@ -1,4 +1,4 @@
-class Api::SessionsController < ApplicationController
+class Api::SessionController < ApplicationController
     def new
         render :new 
     end
